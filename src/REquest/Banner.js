@@ -17,10 +17,10 @@ export const Banner = () => {
           return request;
         }
 
-        console.log(fetchData());
+        fetchData();
 
   } , [])
-  console.log(movie)
+  
 
   function truncate(string , n){
     return string?.length > n ? string.substr(0, n-1) + '....' : string 
@@ -38,7 +38,7 @@ export const Banner = () => {
            
         <div  className='banner_contain'>
             <h1 className='banner_title'>
-              {movie?.title || movie?.name || movie?. original_name}
+              {movie?.title || movie?.name || movie?.original_name}
             </h1>
             <div className='banner__buttons'>
                 <button className='banner_button'>Play </button>

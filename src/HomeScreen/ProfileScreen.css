@@ -1,0 +1,61 @@
+.profileScreen{
+    height: 100vh;
+    color: white;
+    background-color: rgb(113, 88, 88);
+    
+}
+.profile__logo{
+    height: 100px;
+    width: 100px;
+}
+.profileScreen__body{
+    position:absolute;
+    left: 20%;
+    top: 30%;
+    display: flex; 
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: ato;
+    max-width: 800px;
+    padding: 10px;
+}
+.profileScreen__info{
+    display: flex;
+}
+.profileScreen__body > h1{
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 10px;
+}
+.profileScreen_details{
+   
+    border-radius: 2px;
+    margin-left: 10px;
+    
+}
+.name{
+    border : solid 2px rgb(177, 163, 163);
+    background-color:grey;
+    border: none;
+    color: rgb(39, 39, 72);
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 10px;
+}
+.signout__button{
+    padding: 10px 16px;
+    margin-top: 10px;
+    background-color: red;
+    width: 100%;
+    cursor: pointer;
+    columns: #fff;
+
+}
+.profile__plans > h3{
+    font-size: 1.2rem;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+
+}
