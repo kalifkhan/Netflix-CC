@@ -30,7 +30,6 @@
     border-radius: 3px;
     border: none;
     cursor: pointer;
-<<<<<<< HEAD
     
 }
 .singup_link{
@@ -40,9 +39,6 @@
     text-decoration: underline;
 }
 
-=======
-}
->>>>>>> 14ee36544b742b3b23639d1c03f532561f3c7269
 .signupScreen > form >h1{
     text-align: left;
     font-size:  1.3rem;
