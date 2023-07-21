@@ -11,11 +11,16 @@ export const LoginScreen = () => {
             <div className='loginscreen_back'>
                 <img className='login_logo' atl="logo" src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png" />
             </div>
+<<<<<<< HEAD
             <button onClick={() => (setSign(true))}
+=======
+            <button onClick={ ()=> (setSign(true))}
+>>>>>>> 14ee36544b742b3b23639d1c03f532561f3c7269
                 className='signin__button'>
                 Sign In
             </button>
             <div className='background__gridient'></div>
+<<<<<<< HEAD
             {signIn ? (<SignUPScreen />) : (
                 <div className='loginScreen__body'>
                     <h1> Unlimited films, Tv Programs and More </h1><h2>
@@ -39,6 +44,31 @@ export const LoginScreen = () => {
 
             )}
 
+=======
+            { signIn ? (<SignUPScreen />) : (
+                <div className='loginScreen__body'>
+                <h1> Unlimited films, Tv Programs and More </h1><h2>
+                    watch anywhere, cancel at any time
+                </h2>
+                <h3>
+                    Ready to watch? Enter your email or restart your membership
+                </h3>
+
+                <div className='loginScreen_input'>
+                    <form>
+                        <input name="" value="" placeholder='Email Address' />
+                        <button onClick={ ()=> setSign(true)}
+                         className='getStarted'>
+                            Get Started
+                        </button>
+                    </form>
+
+                </div>
+            </div>
+
+            )}
+            
+>>>>>>> 14ee36544b742b3b23639d1c03f532561f3c7269
 
 
 

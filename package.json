@@ -9,7 +9,11 @@
     "@testing-library/user-event": "^14.4.3",
     "axios": "^1.4.0",
     "cors": "^2.8.5",
+<<<<<<< HEAD
     "firebase": "^8.6.8",
+=======
+    "firebase": "^10.0.0",
+>>>>>>> 14ee36544b742b3b23639d1c03f532561f3c7269
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.1.1",
