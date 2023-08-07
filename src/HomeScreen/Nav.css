@@ -33,4 +33,10 @@
    right: 20px;
     cursor: pointer;
 }
+.nav_avatar{
+    position: fixed;
+    width: 30px;
+   right: 60px;
+    cursor: pointer;
+}
 
