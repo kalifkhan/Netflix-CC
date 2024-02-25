@@ -21,7 +21,6 @@ const WeatherAPI = ({ byMovies }) => {
       try {
         const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${loc}&appid=${API_KEY}`);
         console.log("weatherAPI useEffect" + city_name);
-        setFilter(byMovies);
         if (response && response.status === 200) {
           setWeatherData(response.data);
           setWeatherType(response.data.weather[0].main);
@@ -34,8 +33,6 @@ const WeatherAPI = ({ byMovies }) => {
         console.log(error.message);
       }
     };
-
-
     fetchWeatherData();
     //filterData();
   }, [loc]);
@@ -45,7 +42,7 @@ const WeatherAPI = ({ byMovies }) => {
     const filterData = () => {
       if (weatherType === "Clouds") {
         // rometinc 10749 fantacy 14
-        setFilter(dataFilter.filter((mov) => (mov.genre_ids.includes(14))));
+        setFilter(dataFilter.filter((mov) => (mov.genre_ids.includes(14) || mov.genre_ids.includes(10749))));  
       }
       else if (weatherType === "Haze") {
         //biography 18 documentary 99 Hitory 36
@@ -62,7 +59,7 @@ const WeatherAPI = ({ byMovies }) => {
   const handleWeatherDataReceived = () => {
     setLoc(locationRef.current.value);
     locationRef.current.value = '';
-
+    
   }
   return (
     <div>

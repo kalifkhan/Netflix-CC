@@ -20,17 +20,13 @@ function App() {
 
 
   useEffect(() => {
-
-
     const unsubscribe = auth.onAuthStateChanged((userAuth) => {
       if (userAuth) {
-
+        
         dispatch(login({
           uid: userAuth.uid,
           email: userAuth.email
         }))
-
-
       } else {
         // logged out
         dispatch(logout());
