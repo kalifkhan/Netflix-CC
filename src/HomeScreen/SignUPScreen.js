@@ -20,9 +20,7 @@ export const SignUPScreen = () => {
     }).catch((error) => {
       alert(error.message)
     })
-
   }
-
   const signIn = (e) => {
     e.preventDefault();
 

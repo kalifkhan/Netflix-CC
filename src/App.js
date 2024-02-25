@@ -12,13 +12,8 @@ import { ContentByWeather } from './contentBYweather/ContentByWeather';
 import WeatherAPI from './contentBYweather/WeatherAPI';
 
 function App() {
-
-
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
-
-
-
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((userAuth) => {
       if (userAuth) {
@@ -34,12 +29,10 @@ function App() {
     });
 
     return unsubscribe;
-
   }, [dispatch]);
 
   return (
     <div className="App">
-
       <Router>
         {user ? (
           <Routes>
@@ -48,12 +41,10 @@ function App() {
             {/* <Route path="/signup" element={<SignUPScreen />} /> */}
             <Route path="/contentBYweather" element={<ContentByWeather />} />
           </Routes>
-
         ) : (
           <LoginScreen />
         )}
       </Router>
-
     </div>
   );
 }

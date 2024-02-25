@@ -27,9 +27,9 @@ export const LoginScreen = () => {
 
                     <div className='loginScreen_input'>
                         <form>
-                            <input name="" value="" placeholder='Email Address' />
+                            <input name=""  placeholder='Email Address' />
                             <button onClick={() => setSign(true)}
-                                className='getStarted'>
+                                className='getStarted' >
                                 Get Started
                             </button>
                         </form>
