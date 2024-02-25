@@ -21,9 +21,11 @@ const WeatherAPI = ({ byMovies }) => {
       try {
         const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${loc}&appid=${API_KEY}`);
         console.log("weatherAPI useEffect" + city_name);
+        setFilter(byMovies);
         if (response && response.status === 200) {
           setWeatherData(response.data);
           setWeatherType(response.data.weather[0].main);
+
 
         } else {
           throw new Error('API is not working');
@@ -43,36 +45,25 @@ const WeatherAPI = ({ byMovies }) => {
     const filterData = () => {
       if (weatherType === "Clouds") {
         // rometinc 10749 fantacy 14
-        setFilter(dataFilter.filter((mov) => (mov.genre_ids.includes(14) || mov.genre_ids.includes(10749))));  
+        setFilter(dataFilter.filter((mov) => (mov.genre_ids.includes(14))));
       }
-      else if( weatherType === "Haze")
-      {
+      else if (weatherType === "Haze") {
         //biography 18 documentary 99 Hitory 36
-        setFilter(dataFilter.filter((mov) => (mov.genre_ids.includes(18) ||mov.genre_ids.includes(99) || mov.genre_ids.includes(36))));
+        setFilter(dataFilter.filter((mov) => (mov.genre_ids.includes(18) || mov.genre_ids.includes(99) || mov.genre_ids.includes(36))));
       }
-      else{
+      else {
         setFilter(byMovies);
       }
     }
-
-    
     console.log(weatherType);
     filterData();
 
   }, [weatherType])
-
-
   const handleWeatherDataReceived = () => {
     setLoc(locationRef.current.value);
     locationRef.current.value = '';
-    
+
   }
-
-
-  console.log(loc);
-  console.log(weatherData);
-  console.log(dataFilter);
-
   return (
     <div>
       <div>
@@ -82,10 +73,8 @@ const WeatherAPI = ({ byMovies }) => {
       {weatherData ? (
         <div>
           <div></div>
-
-          
           <ContentRow byMovies={dataFilter}> </ContentRow>
-          <WeatherContent weatherData={weatherData} />
+          {/* <WeatherContent weatherData={weatherData} />  */}
         </div>
       ) : (
         <p >Loading weather data...</p>
