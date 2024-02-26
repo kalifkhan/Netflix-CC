@@ -11,10 +11,10 @@ export const LoginScreen = () => {
             <div className='loginscreen_back'>
                 <img className='login_logo' atl="logo" src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png" />
             </div>
-            <button onClick={() => (setSign(true))}
+            { !signIn && <button onClick={() => (setSign(true))}
                 className='signin__button'>
                 Sign In
-            </button>
+            </button>}
             <div className='background__gridient'></div>
             {signIn ? (<SignUPScreen />) : (
                 <div className='loginScreen__body'>
