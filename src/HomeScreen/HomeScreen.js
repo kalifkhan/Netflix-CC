@@ -14,10 +14,6 @@ const HomeScreen = () => {
 
     setToggle(!isToggled);
   }
-
-
-
-
   return (
     <div className='homescreen'>
       <Nav> </Nav>
