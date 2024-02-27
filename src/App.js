@@ -39,7 +39,6 @@ function App() {
           <Suspense fallback={<div> Loading..... </div>}>
             <Routes>
             <Route path="/" element={<HomeScreen />} />
-
             <Route path="/profile" element={<ProfileScreen />} />
             {/* <Route path="/signup" element={<SignUPScreen />} /> */}
             <Route path="/contentBYweather" element={<ContentByWeather />} />
