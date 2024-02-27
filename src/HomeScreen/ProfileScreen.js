@@ -25,7 +25,7 @@ export const ProfileScreen = () => {
                         <div className='profile__plans'>
                             {/* <h3> Plans </h3> */}
                         </div>
-                        <button className='signout__button' onClick={() => auth.signOut()}><Link to='/signup'>Sign Out  </Link>  </button>
+                        <button className='signout__button' onClick={() => auth.signOut()}><Link>Sign Out  </Link>  </button>
                     </div>
                 </div>
             </div>

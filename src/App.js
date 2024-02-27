@@ -10,6 +10,7 @@ import { ProfileScreen } from './HomeScreen/ProfileScreen';
 import { SignUPScreen } from './HomeScreen/SignUPScreen';
 import { ContentByWeather } from './contentBYweather/ContentByWeather';
 import WeatherAPI from './contentBYweather/WeatherAPI';
+import { Suspense } from 'react';
 
 function App() {
   const user = useSelector(selectUser);
@@ -35,12 +36,16 @@ function App() {
     <div className="App">
       <Router>
         {user ? (
-          <Routes>
+          <Suspense fallback={<div> Loading..... </div>}>
+            <Routes>
             <Route path="/" element={<HomeScreen />} />
+
             <Route path="/profile" element={<ProfileScreen />} />
             {/* <Route path="/signup" element={<SignUPScreen />} /> */}
             <Route path="/contentBYweather" element={<ContentByWeather />} />
           </Routes>
+          </Suspense>
+          
         ) : (
           <LoginScreen />
         )}
