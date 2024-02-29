@@ -26,7 +26,6 @@ export const Banner = () => {
         }
       })
       .catch((error) => {
-        // Handle the error
         console.log(error)
       });
   }, []);
