@@ -6,27 +6,34 @@ import axios from './axios';
 export const Banner = () => {
   const [movie , setMovie]= useState([]);
 
-  useEffect( ()=>{
-
-        async function fetchData(){
-
-          const request = await axios.get(requests.fetchTrending);
-          setMovie(
-            request.data.results[Math.floor(Math.random() * request.data.results.length - 1)]
-          );
-          return request;
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const request = await axios.get(requests.fetchTrending);
+        return request.data.results;
+      } catch (error) {
+        console.error("Error fetching data:", error);
+        throw error; // Propagate the error for further handling
+      }
+    };
+  
+    fetchData()
+      .then((results) => {
+        if (results && results.length > 0) {
+          const randomMovie =
+            results[Math.floor(Math.random() * results.length)];
+          setMovie(randomMovie);
         }
-
-        fetchData();
-
-  } , [])
+      })
+      .catch((error) => {
+        // Handle the error
+        console.log(error)
+      });
+  }, []);
   
-  
-
   function truncate(string , n){
     return string?.length > n ? string.substr(0, n-1) + '....' : string 
   };
-
   return (
     <header 
     className='banner'
