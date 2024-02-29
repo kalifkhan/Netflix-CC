@@ -2,10 +2,8 @@ import React, { useState } from 'react'
 import './loginScreen.css';
 import { SignUPScreen } from './SignUPScreen';
 
-
 export const LoginScreen = () => {
     const [signIn, setSign] = useState(false);
-
     return (
         <div className="loginScreen" >
             <div className='loginscreen_back'>
@@ -38,10 +36,6 @@ export const LoginScreen = () => {
                 </div>
 
             )}
-
-
-
-
         </div>
     )
 }
