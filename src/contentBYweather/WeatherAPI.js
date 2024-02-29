@@ -20,7 +20,7 @@ const WeatherAPI = ({ byMovies }) => {
     const fetchWeatherData = async () => {
       try {
         const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${loc}&appid=${API_KEY}`);
-        console.log("weatherAPI useEffect" + city_name);
+        // console.log("weatherAPI useEffect" + city_name);
         if (response && response.status === 200) {
           setWeatherData(response.data);
           setWeatherType(response.data.weather[0].main);
@@ -52,14 +52,12 @@ const WeatherAPI = ({ byMovies }) => {
         setFilter(byMovies);
       }
     }
-    console.log(weatherType);
     filterData();
 
   }, [weatherType])
   const handleWeatherDataReceived = () => {
     setLoc(locationRef.current.value);
     locationRef.current.value = '';
-    
   }
   return (
     <div>

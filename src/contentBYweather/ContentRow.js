@@ -13,7 +13,7 @@ export const ContentRow = (props) => {
         setMovies(props.byMovies);
         } , [props.byMovies])
 
-    console.log(title)
+  
     //console.log(movies);
     return (
         <div className='row'>
