@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import './Banner.css'
 import requests from './Request';
 import axios from './axios';
-
 export const Banner = () => {
   const [movie , setMovie]= useState([]);
 
@@ -16,7 +15,6 @@ export const Banner = () => {
         throw error; // Propagate the error for further handling
       }
     };
-  
     fetchData()
       .then((results) => {
         if (results && results.length > 0) {

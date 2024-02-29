@@ -11,7 +11,6 @@ const requests = {
     fetchRomanticMovies: `/discover/movie?api_key=${API_KEY}&with_genres=10749`,
 
   };
-
 export default requests
  
 // https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}&language=en-US
