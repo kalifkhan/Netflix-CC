@@ -3,6 +3,7 @@ import axios from 'axios';
 import WeatherContent from './WeatherContent';
 import { ContentRow } from './ContentRow';
 import './Weather.css';
+
 const API_KEY = '4690f756c37f0177c7cc0a8f0129e372';
 const city_name = "Mumbai"
 
@@ -42,7 +43,7 @@ const WeatherAPI = ({ byMovies }) => {
     const filterData = () => {
       if (weatherType === "Clouds") {
         // rometinc 10749 fantacy 14
-        setFilter(dataFilter.filter((mov) => (mov.genre_ids.includes(14) || mov.genre_ids.includes(10749))));  
+        setFilter(dataFilter.filter((mov) => (mov.genre_ids.includes(14) || mov.genre_ids.includes(10749))));
       }
       else if (weatherType === "Haze") {
         //biography 18 documentary 99 Hitory 36
@@ -62,9 +63,11 @@ const WeatherAPI = ({ byMovies }) => {
   return (
     <div>
       <div className='popup-element'>
-        <input type="text" ref={locationRef} />
-        <button onClick={handleWeatherDataReceived} >Set  Location </button>
-      </div>
+        <div className='popup'>
+          <input type="text" ref={locationRef} />
+          <button className="popup-btn" onClick={handleWeatherDataReceived} >Set  Location </button>
+
+        </div></div>
       {weatherData ? (
         <div>
           <div></div>
@@ -72,7 +75,7 @@ const WeatherAPI = ({ byMovies }) => {
           {/* <WeatherContent weatherData={weatherData} />  */}
         </div>
       ) : (
-        <p >Loading weather data...</p>
+        <p className='load-container'>Loading weather data...</p>
       )}
     </div>
   );

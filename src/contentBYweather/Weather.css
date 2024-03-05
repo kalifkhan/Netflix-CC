@@ -72,4 +72,25 @@
   .weather__cast > h3{
     font-size: 0.8rem;
   }
-  
+  .popup-element{
+    position: fixed;
+    top: 25%;
+    left: 35%;
+    width:  300px;
+    height: 200px;
+    background-color: antiquewhite;
+  }
+  .popup{
+    display: flex;
+    justify-content: center;
+    
+  }
+  .popup-btn{
+    background-color: rgb(221, 25, 25);
+  }
+  .load-container{
+    color: red;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
