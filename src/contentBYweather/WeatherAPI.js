@@ -79,7 +79,7 @@ const WeatherAPI = ({ byMovies }) => {
           {/* <WeatherContent weatherData={weatherData} />  */}
         </div>
       ) : (
-        <p className='load-container'>Loading weather data...</p>
+        <p className='load-container'>Loading data...</p>
       )}
     </div>
   );
