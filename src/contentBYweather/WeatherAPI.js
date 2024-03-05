@@ -70,7 +70,7 @@ const WeatherAPI = ({ byMovies }) => {
         <button className='close-btn' onClick={handleClosePopup}> X </button>
         <div className='popup'>
           <input type="text" ref={locationRef} />
-          <button className="popup-btn" onClick={handleWeatherDataReceived} >Set  Location </button>
+          <button className="popup-btn" onClick={handleWeatherDataReceived} >SET LOCATION </button>
         </div></div> }
       {weatherData ? (
         <div>
