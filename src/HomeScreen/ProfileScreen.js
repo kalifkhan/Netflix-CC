@@ -14,7 +14,6 @@ export const ProfileScreen = () => {
         <div className='profileScreen'>
             <Nav> </Nav>
             <div className='profileScreen__body'>
-              
                 <div className='profileScreen__info'>
                     <img className="profile__logo"
                         alt=""

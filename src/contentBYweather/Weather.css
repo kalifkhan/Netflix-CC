@@ -9,10 +9,8 @@
     border: none;
 }
 .weather_city{
-   
     display: flex;
     color: rgb(133, 15, 236);
-
 }
 .container {
     display: flex;
@@ -21,7 +19,6 @@
     height: 100vh;
     background-color: #f0f0f0;
   }
-  
   .weather__cast {
     background-color: #fff;
     border-radius: 8px;
@@ -29,9 +26,7 @@
     padding: 20px;
     
   }
-  
 .weather__pressure{
-    
   background-color: rgb(220, 235, 235);
     top: 10px;
     margin-left: 50%;

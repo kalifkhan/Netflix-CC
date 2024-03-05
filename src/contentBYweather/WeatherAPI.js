@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 import WeatherContent from './WeatherContent';
 import { ContentRow } from './ContentRow';
-
+import './Weather.css';
 const API_KEY = '4690f756c37f0177c7cc0a8f0129e372';
 const city_name = "Mumbai"
 
@@ -61,7 +61,7 @@ const WeatherAPI = ({ byMovies }) => {
   }
   return (
     <div>
-      <div>
+      <div className='popup-element'>
         <input type="text" ref={locationRef} />
         <button onClick={handleWeatherDataReceived} >Set  Location </button>
       </div>
