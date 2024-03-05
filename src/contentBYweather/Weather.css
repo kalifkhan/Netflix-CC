@@ -74,23 +74,38 @@
   }
   .popup-element{
     position: fixed;
-    top: 25%;
+    top: 35%;
     left: 35%;
     width:  300px;
-    height: 200px;
-    background-color: antiquewhite;
+    height: 100px;
+    gap: 10px;
+    border: 2px;
+    background-color: rgb(249, 247, 244);
   }
   .popup{
     display: flex;
     justify-content: center;
-    
+    align-items: center;
+    margin-top: 50px;
+  
+    & input{
+      margin: 5px;
+    }
   }
   .popup-btn{
-    background-color: rgb(221, 25, 25);
+    color: red;
+    background-color: rgb(5, 1, 1);
   }
   .load-container{
     color: red;
     display: flex;
     justify-content: center;
     margin-top: 10px;
+  }
+  .close-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-decoration: none;
+    margin: 5px;
   }

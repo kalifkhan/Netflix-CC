@@ -13,6 +13,7 @@ const WeatherAPI = ({ byMovies }) => {
   const [loc, setLoc] = useState('');
   const [weatherType, setWeatherType] = useState('');
   const [dataFilter, setFilter] = useState(byMovies);
+  const [popupClose , setPopupClose] = useState(true);
 
   // const city_name = changeLocation;
 
@@ -60,14 +61,17 @@ const WeatherAPI = ({ byMovies }) => {
     setLoc(locationRef.current.value);
     locationRef.current.value = '';
   }
+  const handleClosePopup=()=>{
+      setPopupClose(false);
+  }
   return (
     <div>
-      <div className='popup-element'>
+      { !weatherData && popupClose && <div className='popup-element'>
+        <button className='close-btn' onClick={handleClosePopup}> X </button>
         <div className='popup'>
           <input type="text" ref={locationRef} />
           <button className="popup-btn" onClick={handleWeatherDataReceived} >Set  Location </button>
-
-        </div></div>
+        </div></div> }
       {weatherData ? (
         <div>
           <div></div>
