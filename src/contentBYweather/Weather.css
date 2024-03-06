@@ -109,6 +109,9 @@
     display: flex;
     justify-content: center;
     margin-top: 10px;
+    & h4{
+      text-decoration: underline;
+    }
   }
   .close-btn{
     position: absolute;

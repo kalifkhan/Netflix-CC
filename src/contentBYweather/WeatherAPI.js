@@ -66,9 +66,9 @@ const WeatherAPI = ({ byMovies }) => {
   const handleOpenPopup = () => {
     setPopupClose(true);
   }
-  if (errorMsg) return <div className='load-container' > {errorMsg} -
-    <p > Enter Valid Location  </p>
-  </div>
+  // if (errorMsg) return <div className='load-container' > {errorMsg} -
+  //   <p > Enter Valid Location  </p>
+  // </div>
   return (
     <div>
       {!weatherData && popupClose && <div className='popup-element'>
@@ -84,7 +84,7 @@ const WeatherAPI = ({ byMovies }) => {
           {/* <WeatherContent weatherData={weatherData} />  */}
         </div>
       ) : (
-        <p className='load-container'>Loading data...</p>
+        errorMsg ? (<p className='load-container' > {errorMsg} - <h4 onClick={handleOpenPopup}>Enter Valid Location  </h4> </p> ):<p className='load-container'> Loading data..... </p> 
       )}
     </div>
   );
