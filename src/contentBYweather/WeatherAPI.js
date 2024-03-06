@@ -13,7 +13,8 @@ const WeatherAPI = ({ byMovies }) => {
   const [loc, setLoc] = useState('');
   const [weatherType, setWeatherType] = useState('');
   const [dataFilter, setFilter] = useState(byMovies);
-  const [popupClose , setPopupClose] = useState(true);
+  const [popupClose, setPopupClose] = useState(true);
+  const [errorMsg, setErrorMsg] = useState();
 
   // const city_name = changeLocation;
 
@@ -26,12 +27,11 @@ const WeatherAPI = ({ byMovies }) => {
         if (response && response.status === 200) {
           setWeatherData(response.data);
           setWeatherType(response.data.weather[0].main);
-
-
         } else {
           throw new Error('API is not working');
         }
       } catch (error) {
+        setErrorMsg(error.message);
         console.log(error.message);
       }
     };
@@ -40,7 +40,6 @@ const WeatherAPI = ({ byMovies }) => {
   }, [loc]);
 
   useEffect(() => {
-
     const filterData = () => {
       if (weatherType === "Clouds") {
         // rometinc 10749 fantacy 14
@@ -55,23 +54,29 @@ const WeatherAPI = ({ byMovies }) => {
       }
     }
     filterData();
-
   }, [weatherType])
+
   const handleWeatherDataReceived = () => {
     setLoc(locationRef.current.value);
     locationRef.current.value = '';
   }
-  const handleClosePopup=()=>{
-      setPopupClose(false);
+  const handleClosePopup = () => {
+    setPopupClose(false);
   }
+  const handleOpenPopup = () => {
+    setPopupClose(true);
+  }
+  if (errorMsg) return <div className='load-container' > {errorMsg} -
+    <p > Enter Valid Location  </p>
+  </div>
   return (
     <div>
-      { !weatherData && popupClose && <div className='popup-element'>
+      {!weatherData && popupClose && <div className='popup-element'>
         <button className='close-btn' onClick={handleClosePopup}> X </button>
         <div className='popup'>
           <input type="text" ref={locationRef} />
           <button className="popup-btn" onClick={handleWeatherDataReceived} >SET LOCATION </button>
-        </div></div> }
+        </div></div>}
       {weatherData ? (
         <div>
           <div></div>
