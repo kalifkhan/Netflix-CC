@@ -81,7 +81,7 @@
     gap: 10px;
     border: 1px solid;
     border-radius: 4px;
-    background-color: rgb(249, 247, 244);
+    background-color: rgb(247, 246, 251);
     & button{
       cursor: pointer;
       
@@ -102,7 +102,7 @@
   }
   .popup-btn{
     color: red;
-    background-color: rgb(5, 1, 1);
+    background-color: black;
   }
   .load-container{
     color: red;
