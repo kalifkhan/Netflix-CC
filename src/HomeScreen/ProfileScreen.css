@@ -2,7 +2,6 @@
     height: 100vh;
     color: rgb(241, 11, 11);
     background-color: rgb(6, 6, 6);
-    
 }
 .profile__logo{
     height: 100px;
@@ -30,10 +29,8 @@
     margin-bottom: 10px;
 }
 .profileScreen_details{
-   
     border-radius: 2px;
     margin-left: 10px;
-    
 }
 .name{
     border : solid 2px rgb(177, 163, 163);
@@ -41,7 +38,6 @@
     color: rgb(39, 39, 72);
     font-size: 1.4rem;
     font-weight: 500;
-    
 }
 .signout__button{
     padding: 10px 16px;
