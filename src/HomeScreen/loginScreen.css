@@ -4,13 +4,11 @@
     height: 100%;
     background: url("https://miro.medium.com/v2/resize:fit:1400/1*5lyavS59mazOFnb55Z6znQ.png") center no-repeat;
     background-size: cover;
-    
 }
 .background__gridient{
     width: 100%;
     z-index: 1;
     height: 100vh;
-
 }
 .loginScreen__body{
 

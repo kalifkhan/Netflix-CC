@@ -11,7 +11,6 @@ import { SignUPScreen } from './HomeScreen/SignUPScreen';
 import { ContentByWeather } from './contentBYweather/ContentByWeather';
 import WeatherAPI from './contentBYweather/WeatherAPI';
 import { Suspense } from 'react';
-
 function App() {
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
