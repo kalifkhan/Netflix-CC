@@ -37,7 +37,6 @@ function App() {
             <Routes>
             <Route path="/" element={<HomeScreen />} />
             <Route path="/profile" element={<ProfileScreen />} />
-            {/* <Route path="/signup" element={<SignUPScreen />} /> */}
             <Route path="/contentBYweather" element={<ContentByWeather />} />
           </Routes>
           </Suspense>
