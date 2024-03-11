@@ -17,7 +17,6 @@ function App() {
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((userAuth) => {
       if (userAuth) {
-        
         dispatch(login({
           uid: userAuth.uid,
           email: userAuth.email
@@ -27,7 +26,6 @@ function App() {
         dispatch(logout());
       }
     });
-
     return unsubscribe;
   }, [dispatch]);
 
@@ -43,7 +41,6 @@ function App() {
             <Route path="/contentBYweather" element={<ContentByWeather />} />
           </Routes>
           </Suspense>
-          
         ) : (
           <LoginScreen />
         )}

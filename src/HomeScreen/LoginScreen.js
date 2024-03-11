@@ -21,7 +21,6 @@ export const LoginScreen = () => {
                     <h3>
                         Ready to watch? Enter your email or restart your membership
                     </h3>
-
                     <div className='loginScreen_input'>
                         <form>
                             <input name=""  placeholder='Email Address' />
